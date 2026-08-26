@@ -1,0 +1,208 @@
+:root{
+    --background-colour: blanchedalmond;
+    --nav-bar-bg-colour: rgb(103, 105, 112);
+    --card-bg-colour: rgb(238, 244, 246);
+    --toggle-font-day: rgb(131, 131, 20);
+    --web-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --paragraph-colour: rgb(85, 77, 63);
+    --day-polaroid-bg: rgb(85, 44, 44);
+    --polaroid-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --titles: cursive;
+}
+
+body{
+    margin: 0;
+    background-color: blanchedalmond;
+    font-family: var(--web-font);
+
+}
+
+
+nav{
+    /* border: black 1px solid; */
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bar-bg-colour);
+    height: 70px;
+
+}
+
+.navBarList{
+    /* border: red 1px solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 100px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navBarList a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family:inherit;
+    font-weight: bolder;
+    color: var(--background-colour);
+}
+
+
+
+#cloud_icon{
+    width: 50px;
+    height: 50px;
+    padding-left: 20px;
+}
+
+#toggleTheme{
+    margin-right: 20px;
+    width: 80px;
+    height: 30px;
+    color: var(--toggle-font-day);
+    background-color: var(--background-colour);
+    border: 0;
+    border-radius: 20px;
+    font-family: inherit;
+}
+
+
+#mainWeb{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+
+#aboutMe{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* border: red 1px solid; */
+    border-radius: 40px;
+    width: 600px;
+    height: 250px;
+    background-color: rgb(238, 244, 246);
+    margin-top: 100px;
+}
+
+
+#profile{
+    height: 90%;
+    border-radius: 48%;
+    padding: 10px;
+}
+
+.description{   
+    /* border: red 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 ;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.title{
+    /* border: purple 1px solid; */
+    font-weight: bolder;
+    font-style: italic;
+    color: var(--nav-bar-bg-colour);
+}
+
+#paragraph{
+    margin-top: 50px;
+    /* border: purple 1px solid; */
+    color: var(--paragraph-colour);
+}
+
+#funfact{
+    /* border: purple 1pc solid; */
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.polaroid{
+    /* border: red 1px solid; */
+    box-sizing: border-box;
+    width: 350px;
+    height: 450px;
+    padding: 20px;
+    background-color: var(--day-polaroid-bg);
+}
+
+.polaroid img{
+    width: 100%;
+    height: 350px;
+}
+
+.polaroid p {
+    color: var(--background-colour);
+    text-align: center;
+    font-family: var(--polaroid-font);
+    font-weight: bolder;
+}
+
+
+#carousel{
+    margin: 100px auto; 
+    margin-top: 0; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    /* border: red 10px solid; */
+    display: flex;
+    overflow-x: auto;
+    background-color: var(--card-bg-colour);
+}
+
+#carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.group{
+    display: flex;
+    flex-direction: row ;
+    animation: spin 10s infinite linear;
+    gap: 10px;
+    padding-right: 18px;
+}
+
+.card{
+    height: 350px;
+    width: 280px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+@keyframes spin {
+    from {translate: 0%;}
+    to {translate: -100%;}
+}
+
+
+#photobooth-label{
+    margin-bottom: 0; 
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: var(--day-polaroid-bg);
+    font-family: var(--titles);
+}
