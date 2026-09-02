@@ -1,0 +1,139 @@
+/* styles.css - Challenge #2 (Skeleton: Rides Gallery) */
+:root{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(231, 244, 249);
+}
+
+/* 0) Base page */
+body{
+    max-width: 900px;
+}
+
+/* 1) Container */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px
+}
+
+/* 2) Section heading */
+.site-header{
+    /* border: red 1px solid; */
+    align-self: flex-start;
+}
+
+.attractions h2{
+    /* border: orange 1px solid; */
+    font-weight: bolder;
+}
+
+.attractions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* 3) Cards wrapper (center all cards horizontally) */
+.cards{
+    /* border: rgb(255, 255, 173) 2px solid; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    /* border-bottom: 1px rgba(128, 128, 128, 0.471) solid; */
+    /* margin-bottom: 20px; */
+}
+
+/* 4) Card (size, spacing, border, rounded corners) */
+.card{
+    /* display: flex;
+    flex-direction: column; */
+    border: rgba(128, 128, 128, 0.402) 1px solid;
+    width: 230px;
+    height: 270px;
+    min-height: auto;
+    max-height: 300px;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* 5) Card text (h3 title, paragraph blurb) */
+
+.card h3{
+    position: absolute;
+    /* top: 100px; */
+    background-color: aliceblue;
+    width: 100%;
+    bottom: 70px;
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 5px;
+
+}   
+
+.blurb{
+    /* margin: 5px 10px; */
+    font-size: smaller;
+    text-align: left;
+    color: rgb(82, 76, 76);
+    background-color: aliceblue;
+    position: absolute; 
+    top: 200px;
+    margin: 0;
+    height: 70px;
+    padding-top: 20px;
+    padding-left: 5px;
+    
+}
+
+
+/* 6) Card image (fit within card, centered) */
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+}   
+
+/* 7) Hover state: change border to green, then make it wigglew */
+.card:hover{
+    border: green 1px solid;
+    animation: rotate-shake 0.2s linear;
+}
+
+/* 8) Footer */
+.site-footer{
+    /* border: purple 1px solid; */
+    width: 100%;
+}
+
+.site-footer p{
+    text-align: center;
+    color: rgb(87, 81, 81);
+    font-size: small;
+    margin-top: 20px;
+    border-top: rgba(87, 81, 81, 0.612) 1px solid;
+    padding: 20px;
+}
+
+
+@keyframes rotate-shake {
+  0%   { transform: rotate(0deg)}
+  25%  { transform: rotate(-10deg)}
+  50%  { transform: rotate(0deg)}
+  75%  { transform: rotate(10deg) }
+  100% { transform: rotate(0deg) }
+}
